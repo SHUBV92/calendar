@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
 
-import calendarReducer from "../Calendar/calendar.reducer";
+import calendarReducer from "../Redux-Calendar/calendar.reducer";
 
 console.log('Root-reducer', calendarReducer)
 
