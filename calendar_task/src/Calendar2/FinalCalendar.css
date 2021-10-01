@@ -1,0 +1,9 @@
+.calendar-box {
+  border: 5px solid orange;
+  border-radius: 5px;
+  padding: 2px;
+}
+
+.button {
+  border: 2px solid orange;
+}

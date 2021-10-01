@@ -3,7 +3,7 @@ import { useState } from "react";
 import { connect } from "react-redux";
 import Card from "./Card";
 
-import { cancelChoosing, chooseDate } from "../Calendar/calendar.actions";
+import { cancelChoosing, chooseDate } from "../Redux-Calendar/calendar.actions";
 
 interface ChooseDateFromCalendar {
   handleDate: any;
@@ -62,7 +62,6 @@ const mapStateToProps = (state: any) => {
 };
 
 const mapDispatchToProps = (dispatch: any) => {
-  // console.log("mapDispatchToProps", state);
   return {
     cancelChoosing: () => dispatch(cancelChoosing()),
 

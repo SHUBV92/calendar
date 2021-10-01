@@ -1,7 +1,10 @@
 import styled from "styled-components";
 
-export const CardContainer = styled.div`
-  /* display: flex; */
-  /* padding: 5rem; */
-  box-shadow: 10px 5px 5px grey;
+interface Props {
+  variant: any;
+}
+
+export const CardContainer = styled.div<Props>`
+  background-color: ${(props) => (props.variant ? "grey" : "white")};
+  box-shadow: 5px 15px 15px grey;
 `;

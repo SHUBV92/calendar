@@ -8,8 +8,11 @@ interface Props {
   maxWidth?: string;
   margin?: string;
   children?: React.ReactNode;
+  variant?: any;
 }
 
-const Card = ({ children }: Props) => <CardContainer>{children}</CardContainer>;
+const Card = ({ children, variant }: Props) => (
+  <CardContainer variant={variant}>{children}</CardContainer>
+);
 
 export default Card;
