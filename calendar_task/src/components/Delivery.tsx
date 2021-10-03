@@ -1,16 +1,14 @@
 import { DeliveryContainer } from "./Delivery.styles";
-import Buttons from "./Button";
-import Card from "./Card";
+import Card from "./card/Card";
 import { MouseEventHandler } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCalendar, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 interface Dates {
-  date: string;
   onClick: MouseEventHandler;
 }
 
-const ChosenDeliveryDate = ({ date, onClick }: Dates) => {
+const ChosenDeliveryDate = ({ onClick }: Dates) => {
   const chosenDate = localStorage.getItem("chosenDate");
 
   return (
@@ -35,19 +33,6 @@ const ChosenDeliveryDate = ({ date, onClick }: Dates) => {
             </div>
           </button>
         </div>
-        {/* <Card variant={"secondary"} >
-          <p>
-            <FontAwesomeIcon icon={faTruck} />
-            {chosenDate}
-            Earliest delivery
-          </p>
-          <Buttons onClick={onClick}>
-            <>
-              <FontAwesomeIcon icon={faCalendar} />
-              Change
-            </>
-          </Buttons>
-        // </Card> */}
       </DeliveryContainer>
     </Card>
   );

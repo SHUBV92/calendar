@@ -1,6 +1,6 @@
-import { useEffect, KeyboardEventHandler } from "react";
+import { useEffect, KeyboardEventHandler } from 'react';
 
-import "./Modal.css";
+import './Modal.css';
 
 const Modal = (props: any) => {
   const closeOnEscapeKeyDown = (e: any) => {
@@ -10,9 +10,9 @@ const Modal = (props: any) => {
   };
 
   useEffect(() => {
-    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    document.body.addEventListener('keydown', closeOnEscapeKeyDown);
     return function cleanup() {
-      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+      document.body.removeEventListener('keydown', closeOnEscapeKeyDown);
     };
   }, []);
 
@@ -21,14 +21,11 @@ const Modal = (props: any) => {
   }
 
   return (
-    <div className="modal" onClick={props.onClose}>
-      <div className="modal-contnet" onClick={(e) => e.stopPropagation()}>
-        {/* <div className="modal-header">
-          <h4 className="modal-title">{props.title}</h4>
-        </div> */}
-        <div className="modal-body">{props.children}</div>
-        <div className="modal-footer">
-          <button onClick={props.onClose} className="button">
+    <div className='modal' onClick={props.onClose}>
+      <div className='modal-contnet' onClick={(e) => e.stopPropagation()}>
+        <div className='modal-body'>{props.children}</div>
+        <div className='modal-footer'>
+          <button onClick={props.onClose} className='button'>
             CANCEL DON'T CHANGE
           </button>
         </div>

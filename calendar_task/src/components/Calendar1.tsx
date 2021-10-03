@@ -1,7 +1,7 @@
 import { Modal } from "@material-ui/core";
 import { useState } from "react";
 import { connect } from "react-redux";
-import Card from "./Card";
+import Card from "./card/Card";
 
 import { cancelChoosing, chooseDate } from "../Redux-Calendar/calendar.actions";
 

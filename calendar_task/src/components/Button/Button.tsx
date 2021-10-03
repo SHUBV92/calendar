@@ -1,5 +1,5 @@
-import { Button } from "@material-ui/core";
-import { MouseEventHandler } from "react";
+import { Button } from '@material-ui/core';
+import { MouseEventHandler } from 'react';
 
 interface Button {
   onClick: MouseEventHandler | any;
