@@ -1,7 +1,15 @@
 import { ThemeProvider } from 'styled-components';
 
 const theme = {
-  colors: {
+  primaryColors: {
+    blue: '#1e5d84',
+    lightBlue: '#5d92b8',
+    pink: '#f2c4c4',
+    red: '#d2322e',
+    lightGrey: '#f7f5f3',
+    darkGrey: '#9c9896',
+  },
+  secondaryColors: {
     powderWhite: '#FFFDF9',
     persianGreen: '#06B49A',
     lightBlue: '#AFDBD2',

@@ -25,9 +25,11 @@ const Modal = (props: any) => {
       <div className='modal-contnet' onClick={(e) => e.stopPropagation()}>
         <div className='modal-body'>{props.children}</div>
         <div className='modal-footer'>
-          <button onClick={props.onClose} className='button'>
-            CANCEL DON'T CHANGE
-          </button>
+          {props.button ? (
+            <button onClick={props.onClose} className='button'>
+              {props.buttonName}
+            </button>
+          ) : null}
         </div>
       </div>
     </div>

@@ -1,13 +1,29 @@
-import { Button } from '@material-ui/core';
 import { MouseEventHandler } from 'react';
+import { ButtonContainer } from './Button.styles';
 
-interface Button {
+interface ButtonProps {
   onClick: MouseEventHandler | any;
   children: React.ReactNode;
+  color: string;
+  backgroundColor: string;
+  border: string;
 }
 
-const Buttons = ({ onClick, children }: Button) => (
-  <button onClick={(e) => onClick(e)}>{children}</button>
+const Button = ({
+  onClick,
+  children,
+  color,
+  backgroundColor,
+  border,
+}: ButtonProps) => (
+  <ButtonContainer
+    backgroundColor={backgroundColor}
+    color={color}
+    border={border}
+    onClick={(e: any) => onClick(e)}
+  >
+    {children}
+  </ButtonContainer>
 );
 
-export default Buttons;
+export default Button;

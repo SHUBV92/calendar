@@ -1,9 +1,7 @@
-import { Modal } from "@material-ui/core";
-import { useState } from "react";
-import { connect } from "react-redux";
-import Card from "./card/Card";
+import { connect } from 'react-redux';
+import Card from './card/Card';
 
-import { cancelChoosing, chooseDate } from "../Redux-Calendar/calendar.actions";
+import { cancelChoosing, chooseDate } from '../Redux-Calendar/calendar.actions';
 
 interface ChooseDateFromCalendar {
   handleDate: any;
@@ -12,32 +10,30 @@ interface ChooseDateFromCalendar {
 }
 
 const Calendar = (props: any) => {
-  console.log("Chosen Date Redux", props.chosenDate);
-
-  // const [chosenDate, setChosenDate]= useState<String>('')
+  console.log('Chosen Date Redux', props.chosenDate);
 
   // set calendar value to todays date
   const currentdate = new Date();
   const datetime =
     currentdate.getFullYear() +
-    "-" +
+    '-' +
     (currentdate.getMonth() + 1) +
-    "-" +
+    '-' +
     currentdate.getDate().toString();
 
   const handleInputChange = (event: any) => {
-    localStorage.setItem("chosenDate", props.chosendate);
+    localStorage.setItem('chosenDate', props.chosendate);
     // setChosenDate(event.currentTarget.value)
     // handleDate(event.currentTarget.value)
   };
   return (
-    <Card>
-      <div className="Calendar">
+    <Card backgroundColor={'green'}>
+      <div className='Calendar'>
         <p>Chosen Date: {props.chosendate}</p>
         <input
-          type="date"
-          id="delivery"
-          name="delivery-date"
+          type='date'
+          id='delivery'
+          name='delivery-date'
           value={datetime}
           onChange={(event) => handleInputChange(event)}
           onClick={() => props.chooseDate(props.choosedate)}
@@ -55,7 +51,7 @@ const Calendar = (props: any) => {
 
 // redux
 const mapStateToProps = (state: any) => {
-  console.log("mapStateProps:", state.calendar.chosendate);
+  console.log('mapStateProps:', state.calendar.chosendate);
   return {
     chosendate: state.calendar.chosendate,
   };

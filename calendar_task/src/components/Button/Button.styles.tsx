@@ -1,6 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-// export const Button = styled.button`
-//   /* color: ${(props) => (
-//       /* props.variant ? "grey" : "blue")}; */
-// `
+interface ButtonProps {
+  color?: string;
+  backgroundColor?: string;
+  border: string;
+}
+
+export const ButtonContainer = styled.button<ButtonProps>`
+  color: ${(props) => (props.color ? props.color : '#ffff')};
+  background-color: ${(props) =>
+    props.backgroundColor ? props.backgroundColor : '#ffff'};
+  border: ${(props) => (props.border ? props.border : 'none')};
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+`;

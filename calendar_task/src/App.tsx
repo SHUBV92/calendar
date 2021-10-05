@@ -10,15 +10,21 @@ const App = () => {
   const [show, setShow] = useState(false);
 
   return (
-    <Theme>
-      <div className='App'>
+    <>
+      <Theme>
         <GlobalStyle />
         <ChosenDeliveryDate onClick={() => setShow(true)} />
-        <Modal title={'choose date'} onClose={() => setShow(false)} show={show}>
-          <FinalCalendar />
+        <Modal
+          title={'choose date'}
+          onClose={() => setShow(false)}
+          show={show}
+          buttonName='Shubs'
+          button={false}
+        >
+          <FinalCalendar onClose={setShow} />
         </Modal>
-      </div>
-    </Theme>
+      </Theme>
+    </>
   );
 };
 

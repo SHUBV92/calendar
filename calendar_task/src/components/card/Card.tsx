@@ -1,18 +1,17 @@
-import { CardContainer } from "./Card.styles";
+import { CardContainer } from './Card.styles';
 
 interface Props {
   className?: string;
-  display?: string;
-  flexDirection?: string;
-  alignItems?: string;
-  maxWidth?: string;
-  margin?: string;
   children?: React.ReactNode;
-  variant?: any;
+  backgroundColor: string;
 }
 
-const Card = ({ children, variant }: Props) => (
-  <CardContainer variant={variant}>{children}</CardContainer>
+const Card = ({ children, backgroundColor, className }: Props) => (
+  <>
+    <CardContainer backgroundColor={backgroundColor} className={className}>
+      {children}
+    </CardContainer>
+  </>
 );
 
 export default Card;

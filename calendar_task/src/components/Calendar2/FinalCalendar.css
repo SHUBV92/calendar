@@ -1,9 +1,59 @@
+.react-calendar button {
+  border: none;
+  cursor: pointer;
+}
+
 .calendar-box {
-  border: 5px solid orange;
+  border: none;
   border-radius: 5px;
   padding: 2px;
 }
 
-.button {
+.react-calendar__month-view__days__day {
+  background-color: blue;
+  padding: 100rem;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  color: blue;
+}
+
+.react-calendar__month-view__weekdays {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+
+.react-calendar__month-view__weekNumbers {
+  font-weight: bold;
+  color: yellow;
+}
+
+.react-calendar__month-view__days {
+  border: none;
+}
+
+.react-calendar__tile {
+  max-width: 100%;
+  text-align: center;
+  padding: 0.75em 0.5em;
+  background: none;
+  color: orange;
   border: 2px solid orange;
+}
+
+.react-calendar__tile button {
+  border: 2px solid orange;
+  padding: 10rem;
+}
+
+.react-calendar__tile--active button {
+  background-color: orange;
+  color: white;
+}
+
+.calendar-button {
+  display: flex;
+  justify-content: space-between;
 }
